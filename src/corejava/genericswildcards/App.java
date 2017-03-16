@@ -21,7 +21,8 @@ class Camera extends Machine{
     }
 }
 public class App {
-    private static void showList(ArrayList<Machine> list) {
+    private static void showList(ArrayList<? extends Machine> list) {
+        //the wildcard '?' ensures that only Machine and it's child types are added to list
         System.out.println("In showlist method");
         for(Machine machine: list) {
             System.out.println(machine);

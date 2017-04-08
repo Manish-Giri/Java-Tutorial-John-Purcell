@@ -7,6 +7,8 @@ import java.util.Random;
  * Created by manishgiri on 4/8/17.
  */
 public class ArrayListApp {
+
+
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<>();
         //add
@@ -26,22 +28,29 @@ public class ArrayListApp {
             numbers1.add(num);
         }
 
-        //display list
-        for(int n: numbers1) {
-            System.out.print(n);
-        }
-        System.out.println();
+
+        System.out.println(numbers1.toString());
 
         //delete last element, note time diff
-        long currentTimeMS = System.currentTimeMillis();
-        System.out.println(currentTimeMS);
-        //numbers1.remove(numbers1.size() -1);
-        numbers1.remove(10);
-        long endTimeMS = System.currentTimeMillis();
-        System.out.println(endTimeMS);
+        long currentTimeMS = System.nanoTime();
+        //System.out.println(currentTimeMS);
+        numbers1.remove(numbers1.size() -1);
+        //numbers1.remove(10);
+        long endTimeMS = System.nanoTime();
+        //System.out.println(endTimeMS);
         long diff = endTimeMS - currentTimeMS;
 
         System.out.println("Deletion time from end = " + diff);
+
+        //delete last element, note time diff
+        currentTimeMS = System.nanoTime();
+        System.out.println(currentTimeMS);
+        //numbers1.remove(numbers1.size() -1);
+        numbers1.remove(60);
+        endTimeMS = System.nanoTime();
+        //System.out.println(endTimeMS);
+        diff = endTimeMS - currentTimeMS;
+        System.out.println("Deletion time from middle = " + diff);
 
     }
 }

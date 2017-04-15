@@ -18,17 +18,24 @@ public class LinkedListApp {
 
         //add items to end of list
         //result - 11ms in ArrayList, 7ms in LinkedList
-        /*for(int i = 0; i < 1E5; i++) {
+        for(int i = 0; i < 1E5; i++) {
             list.add(i);
-        }*/
+        }
 
         //add items at beginning of list
         // Result - 3883 ms in ArrayList, 9ms in LinkedList
 
-        for(int i = 0; i < 1E5; i++) {
+       /* for(int i = 0; i < 1E5; i++) {
             list.add(0,i);
+        }*/
+
+        //add items at near end of list (end -100)
+        // Result - 3883 ms in ArrayList, 9ms in LinkedList
+
+       /* for(int i = 0; i < 1E5; i++) {
+            list.add(list.size() - 100,i);
         }
-        
+*/
         long end = System.currentTimeMillis();
 
         System.out.println("Time taken: " + (end - start) + " ms for " + type);

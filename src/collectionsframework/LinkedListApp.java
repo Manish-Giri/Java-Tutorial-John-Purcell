@@ -17,10 +17,18 @@ public class LinkedListApp {
         long start = System.currentTimeMillis();
 
         //add items to end of list
-        for(int i = 0; i < 1E5; i++) {
+        //result - 11ms in ArrayList, 7ms in LinkedList
+        /*for(int i = 0; i < 1E5; i++) {
             list.add(i);
-        }
+        }*/
 
+        //add items at beginning of list
+        // Result - 3883 ms in ArrayList, 9ms in LinkedList
+
+        for(int i = 0; i < 1E5; i++) {
+            list.add(0,i);
+        }
+        
         long end = System.currentTimeMillis();
 
         System.out.println("Time taken: " + (end - start) + " ms for " + type);

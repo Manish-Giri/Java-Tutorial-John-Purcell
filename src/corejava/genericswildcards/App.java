@@ -36,17 +36,20 @@ public class App {
 
         //machines.add(new Camera());
 
-        for(Machine machine: machines) {
-            //System.out.println(machine);
-        }
+        /*
+         for(Machine machine: machines) {
+            // System.out.println(machine);
+        }*/
 
         ArrayList<Camera> cameras = new ArrayList<>();
         cameras.add(new Camera());
         cameras.add(new Camera());
 
+        /*
         for(Camera camera: cameras) {
             //System.out.println(camera);
         }
+        */
 
         showList(machines);
         showList(cameras);

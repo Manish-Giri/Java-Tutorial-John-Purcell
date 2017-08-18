@@ -25,5 +25,9 @@ public class App {
 
         // call grow
         plant.grow();
+
+        // test lambda
+        Plant myLambda = () -> System.out.println("Plant growing!");
+        myLambda.grow();
     }
 }

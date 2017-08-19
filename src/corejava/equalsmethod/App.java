@@ -7,6 +7,7 @@ public class App {
         Person person3 = new Person(5, "Bob");
 
 
+        System.out.println(person1.equals(person2));
         System.out.println(person1.equals(person3));
     }
 
